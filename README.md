@@ -75,6 +75,47 @@ sbt "runMain runListSum"
 sbt "runMain runListConcat"
 ```
 
+#### 6. `GuardPatterns.scala` - Pattern Matching com Guards
+Demonstra o uso de guard patterns para adicionar condições ao pattern matching:
+- Guards com `if` para condições extras nos padrões
+- Categorização de itens baseada em faixas de preços
+- Combinação de extração de valores e lógica condicional
+- Tratamento de múltiplas condições com operadores lógicos
+
+**Como executar:**
+```bash
+sbt "runMain guardPatterns.main"
+```
+
+#### 7. `Unapply.scala` - Extractors Customizados
+Explora a implementação manual de extractors e o método `unapply`:
+- Implementação de `apply` e `unapply` para classes regulares
+- Diferenças entre case classes e classes com extractors manuais
+- Desestruturação customizada em pattern matching
+- Sintaxe conveniente para criação e extração de valores
+
+**Como executar:**
+```bash
+sbt "runMain testPoint2"
+```
+
+#### 8. `PatternFlavors.scala` - Variações de Pattern Matching
+Demonstra diferentes tipos e técnicas de pattern matching:
+- Desestruturação de variáveis com case classes
+- Pattern matching exaustivo com tipos soma
+- Pattern matching com listas (head::tail)
+- Pattern matching aninhado com estruturas complexas
+- Processamento de estruturas de dados recursivas
+
+**Como executar:**
+```bash
+sbt "runMain variableDestructuring"
+sbt "runMain runAreaCalculations"
+sbt "runMain parameterDestructuring"
+sbt "runMain runListExample"
+sbt "runMain runCustomerExample"
+```
+
 ## Conceitos Abordados
 
 ### Tipos Produto
@@ -89,10 +130,18 @@ sbt "runMain runListConcat"
 - **Tratamento de Erros**: Alternativa funcional às exceções
 - **Variantes**: Diferentes casos de um mesmo tipo abstrato
 
+### Pattern Matching Avançado
+- **Guard Patterns**: Condições extras com `if` no pattern matching
+- **Extractors Customizados**: Implementação manual de `unapply`
+- **Desestruturação**: Extração de valores de estruturas complexas
+- **Pattern Matching Aninhado**: Extração de múltiplos níveis
+- **Wildcard Patterns**: Tratamento de casos padrão com `_`
+
 ### Recursão e Estruturas de Dados
 - **Definições Recursivas**: Tipos que se referenciam
 - **Funções Recursivas**: Processamento recursivo de estruturas
 - **Casos Base**: Condições de parada da recursão
+- **Pattern Matching Recursivo**: Análise de estruturas como listas
 
 ## Executando o Projeto
 
@@ -137,14 +186,18 @@ Este projeto utiliza **DevContainer** para garantir um ambiente consistente de d
 1. **Tuplas**: Crie tuplas representando diferentes entidades (pessoa, produto, coordenada 3D)
 2. **Case Classes**: Implemente case classes para modelar um domínio específico
 3. **Pattern Matching**: Adicione novos casos aos tipos soma existentes
-4. **Recursão**: Implemente funções recursivas adicionais para `MyList`
-5. **Combinação**: Use tipos produto e soma juntos para modelar estruturas complexas
+4. **Guard Patterns**: Implemente classificações usando guards com múltiplas condições
+5. **Extractors**: Crie extractors customizados para suas próprias classes
+6. **Recursão**: Implemente funções recursivas adicionais para `MyList`
+7. **Pattern Matching Aninhado**: Modele estruturas complexas com múltiplos níveis
+8. **Combinação**: Use tipos produto e soma juntos para modelar estruturas complexas
 
 ## Recursos Adicionais
 
 - [Documentação Oficial do Scala](https://docs.scala-lang.org/)
 - [Guia de Case Classes](https://docs.scala-lang.org/tour/case-classes.html)
 - [Pattern Matching and Sealed Classes](https://docs.scala-lang.org/tour/pattern-matching.html)
+- [Extractor Objects](https://docs.scala-lang.org/tour/extractor-objects.html)
 
 ---
 
